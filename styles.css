@@ -1,0 +1,726 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: #1a699e; /* Bluish background color */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 250px;
+    height: auto;
+    margin-left: 60px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: rgb(236, 238, 241); /* Lighter color on hover */
+}
+nav ul li.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1a303f; /* Dropdown background color */
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+}
+
+.dropdown-content a {
+    color: #fff; /* White text color */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-content a:hover {
+    background-color: #3498db; /* Lighter color on hover */
+}
+
+li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Add a dropdown icon */
+li.dropdown > a::after {
+    content: ' ▼'; /* Unicode character for down arrow */
+    font-size: 12px;
+    margin-left: 5px;
+}
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  margin-right: 20px;
+}
+
+
+.ranks {
+    background-color: #d338a4; /* Red background color */
+    color: #fff; /* White text color */
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.services{
+  background-color: #386ed3; /* Red background color */
+    color: #fff; /* White text color */
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.service-link{
+  display: inline-block;
+  padding: 8px 26px;
+  background-color: #1e2429; /* Adjust the color as needed */
+  color: #fff; /* Adjust the color as needed */
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.service-link:hover {
+  background-color: #293f7a; /* Adjust the color as needed */
+}
+
+ swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-container::before{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.8) 100%);
+    
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+ 
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+  } 
+
+
+.hero-text {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1000; /* Ensure the text is on top of the overlay */
+}
+
+.hero-text h2 {
+    letter-spacing: 4px;
+    font-size: 60px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-text h3 {
+    font-size: 40px;
+    font-weight: lighter;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    padding: 5px 96px;
+    background-color: rgb(16, 60, 82); /* Adjust the color as needed */
+    color: #fff; /* Adjust the color as needed */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn { 
+    width: 140px;
+    height: 50px;
+    background: linear-gradient(to top, #00154c, #12376e, #23487f);
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+
+  .btn a{
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .btn span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: top 0.5s;
+  }
+  
+  .btn-text-one {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .btn-text-two {
+    position: absolute;
+    width: 100%;
+    top: 150%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .btn:hover .btn-text-one {
+    top: -100%;
+  }
+  
+  .btn:hover .btn-text-two {
+    top: 50%;
+  }
+  
+  .overview-section {
+    background-color: rgb(202, 224, 230); 
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.overview-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #1f1c1c;
+}
+
+.overview-section p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #302d2d; 
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.mission-vision-cards {
+  background-color: rgb(202, 224, 230); 
+  padding: 50px 20px;
+}
+
+.mission-vision-cards .containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 100%; /* Make cards take full width on smaller screens */
+  max-width: 500px; /* Limit maximum width for larger screens */
+  box-sizing: border-box; /* Include padding and border in the total width */
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(139, 139, 139, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  padding: 10px 16px;
+  background-color: #3498db; 
+  color: #fff; 
+  font-size: 1.5em;
+}
+
+.card p {
+  font-size: 1em;
+  color: #252424; 
+  margin-top: 10px;
+}
+
+.read-more-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #3498db; /* Adjust the color as needed */
+  color: #fff; /* Adjust the color as needed */
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+  background-color: #2980b9; /* Adjust the color as needed */
+}
+
+
+.department-message-card {
+  background-color: rgb(202, 224, 230); 
+  padding: 50px 20px;
+}
+
+.department-message-card .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.department-message-card .card2 {
+  width: 100%; /* Make cards take full width on smaller screens */
+  max-width: 900px; /* Limit maximum width for larger screens */
+  box-sizing: border-box; /* Include padding and border in the total width */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.department-message-card .card2 h2 {
+  font-size: 1.5em;
+  color: #333; /* Adjust the color as needed */
+  text-align: center;
+}
+
+.department-message-card .card2 h3 {
+  text-align: center;
+  font-size: 16px;
+  color: #333; /* Adjust the color as needed */
+}
+ .professor-image {
+  width: 10%;
+  height: auto;
+  border-radius: 50%; 
+  margin-right: 20px;
+}
+
+.department-message-card .card2 p {
+  font-size: 1em;
+  color: #666; /* Adjust the color as needed */
+  margin-top: 10px;
+}
+
+.department-message-card .read-more-btn2 {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #3498db; /* Adjust the color as needed */
+  color: #fff; /* Adjust the color as needed */
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.4s;
+  text-align: right;
+ 
+}
+
+.department-message-card .read-more-btn2:hover {
+  background-color: #2980b9; 
+}
+
+.news-section {
+  background-color: rgb(202, 224, 230); 
+  padding: 30px 20px;
+}
+
+.news-section .containernews {
+  display: flex;
+  
+  justify-content: space-around;
+}
+
+.news-section h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.news-part {
+ margin-left: 40px;
+}
+
+.news-title  {
+  font-weight: bold;
+}
+
+.notice-title{
+  font-weight: bold;
+}
+
+.news-list,
+.notice-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.news-list li,
+.notice-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+ .news-list li:hover,
+.notice-list li:hover {
+  background-color: rgb(168, 202, 211); 
+} 
+
+/* Styles for expanding content */
+ .news-list li .news-content,
+.notice-list li .notice-content {
+  display: none;
+  padding: 10px;
+} 
+
+
+
+
+footer {
+  background-color: #253f61;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.containerfoot {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-sm-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
+.col-md-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  box-sizing: border-box;
+}
+
+/* Style the footer-logo */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.footer-logo img {
+  width: 70%; /* Adjust the size as needed */
+  height: auto;
+}
+
+.social-icons img{
+  width: 30px;
+  margin-top: 10px;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+.footer__btn {
+  margin-right: 10px;
+}
+
+/* Style the important-links */
+.important-links {
+  color: #fff;
+}
+
+.important-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.important-links a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+
+.important-links a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.important-links a:hover::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the underline */
+  bottom: 0;
+  left: 0;
+  background-color: #fff; /* Adjust the color of the underline */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.important-links a:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the underline */
+  bottom: 0;
+  left: 0;
+  background-color: #fff; /* Adjust the color of the underline */
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.important-links a:hover::before,
+.important-links a:hover::after {
+  transform: scaleX(1);
+}
+/* Style the contact-info */
+.contact-info {
+  color: #fff;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+}
+.copyright a {
+  text-decoration: none;
+  color: #96a5c2;
+}
+.copyright p {
+  font-size: 14px;
+}
+
+/* Adjust styling for small screens */
+@media (max-width: 690px) {
+  .col-sm-6, .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .logo img {
+    margin-left: 20px; /* Adjust the margin for the logo */
+    max-width: 100px;
+  }
+
+  nav ul {
+    display: none; /* Hide regular navigation on smaller screens */
+    position: fixed; /* Fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(98, 108, 153, 0.8); /* Use rgba for transparency */
+    backdrop-filter: blur(10px); /* Apply a background blur */
+    z-index: 5000; /* Ensure it appears above other elements */
+    overflow-y: auto; /* Enable scrolling if the sidenav has too much content */
+    text-align: center;
+    padding-top: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  nav ul li {
+    padding: 15px 0; /* Add padding to the individual navigation items */
+  }
+
+  nav ul a {
+    color: #fff; /* Set the text color */
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 120px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Box shadow for a subtle effect */
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    text-align: left;
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .hamburger-menu {
+    display: block; /* Display the hamburger menu icon on smaller screens */
+    cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* You can customize the hamburger menu icon style */
+  .hamburger-menu i {
+    font-size: 24px;
+    color: #ffffff; /* Adjust color as needed */
+  }
+
+  .hamburger-menu.active {
+    transform: rotate(90deg); /* Rotate the icon when active */
+  }
+
+  /* Add styles for the dropdown content to be displayed properly */
+  nav ul.active {
+    display: block;
+    transform: translateY(0);
+  }
+  
+
+  .ranks,
+  .services {
+    font-size: 12px;
+  }
+
+  .service-link {
+    padding: 8px 18px;
+    margin-top: 8px;
+    margin-right: 8px;
+  }
+
+  .swiper-container::before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.7) 100%);
+  }
+
+  .hero-text {
+    top: 25%;
+  }
+
+  .hero-text h2 {
+    letter-spacing: 0px;
+    font-size: 20px; /* Adjust font size for smaller screens */
+}
+
+.hero-text h3 {
+  display: none;
+  font-size: 15px; /* Adjust font size for smaller screens */
+  padding: 5px 15px; /* Adjust padding for smaller screens */
+}
+
+.btn {
+  width: 100px; /* Adjust the width for smaller screens */
+  height: 40px; /* Adjust the height for smaller screens */
+  top: 160%; /* Adjust the vertical position for smaller screens */
+}
+
+.btn span {
+  font-size: 10px; /* Adjust font size for smaller screens */
+}
+.overview-section h2 {
+  font-size: 1.5em; /* Adjust font size for smaller screens */
+}
+
+.overview-section p {
+  text-align: left;
+  font-size: 1em; /* Adjust font size for smaller screens */
+  margin: 10px 10px;
+}
+
+.card {
+  max-width: 100%; /* Make cards take full width on smaller screens */
+}
+.department-message-card .card2 {
+  max-width: 100%; /* Make cards take full width on smaller screens */
+}
+
+.professor-image {
+  width: 30%; /* Adjust the width for smaller screens */
+  margin-right: 10px; /* Adjust the margin for smaller screens */
+}
+
+.news-section .containernews {
+  flex-direction: column; /* Stack items vertically on smaller screens */
+  align-items: center; /* Center items for smaller screens */
+}
+
+.news-section h2 {
+  font-size: 1.2em; /* Adjust font size for smaller screens */
+}
+
+.news-list li,
+.notice-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  width: 100%; /* Make list items take full width on smaller screens */
+}
+
+.news-part {
+  margin-left: 0; /* Adjust margin for smaller screens */
+}
+.footer-logo {
+  margin-bottom: 10px; /* Adjust margin for spacing on smaller screens */
+}
+
+.important-links,
+.contact-info {
+  text-align: center; /* Center text for smaller screens */
+}
+
+
+}
+
